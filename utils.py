@@ -39,16 +39,16 @@ def load_models():
         models = {}
         
         # Load TF-IDF vectorizer
-        with open('./model/vectorizer.pkl', 'rb') as f:
+        with open('./vectorizer.pkl', 'rb') as f:
             models['vectorizer'] = pickle.load(f)
         
         # Load Logistic Regression model
-        with open('./model/logistic_regression.pkl', 'rb') as f:
+        with open('./logistic_regression.pkl', 'rb') as f:
             models['logistic_regression'] = pickle.load(f)
         
         # Load Random Forest model
-        with open('./model/random_forest_classifier.pkl', 'rb') as f:
-            models['random_forest'] = pickle.load(f)
+        # with open('./model/random_forest_classifier.pkl', 'rb') as f:
+        #     models['random_forest'] = pickle.load(f)
         
         return models
     except Exception as e:
